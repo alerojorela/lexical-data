@@ -4,7 +4,7 @@
 
 Lexical data for **spanish**
 
-- forms-lemma-pos relationships
+- forms-lemma-root-pos relationships
 
   - retrieve lemmas from forms
 
@@ -13,7 +13,7 @@ Lexical data for **spanish**
 
 
 
-## TODO
+## TO-DO
 
 - [ ] check femenine gender generation
   - tildes: héroe, ína
