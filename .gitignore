@@ -1,0 +1,50 @@
+# ── This house's own block, since 2026-09-14 ──────────────────────────────
+# ⚠️ In .gitignore, `#` only opens a comment at the start of a line. A comment
+# at the end would be part of the pattern, and the rule would then match
+# nothing, in silence. That is why every explanation gets its own line.
+
+# How this house works: it cites the workshop trunk and means nothing outside
+# it.
+CLAUDE.md
+# The workshop notebook: what is still missing, and what was measured and came
+# out wrong. For a reader from outside, the first is noise and sometimes a
+# promise, and the second is the kitchen. Decided 2026-09-25: they never
+# travel, and whatever the reader needs from them goes in the README.
+TODO.md
+CHANGELOG.md
+# The agent's local permissions and settings. They have carried a credential.
+.claude/
+# «This is not published». It has carried the zero since 2026-09-12, and rules
+# that said `OFFLINE` without it had matched nothing ever since.
+0OFFLINE/
+# PIDs and logs of the house servers.
+.servers/
+# Telethon sessions: a whole key, they get in with no password.
+*.session
+
+# ── Secretos y entorno ────────────────────────────────────────────────────
+.env
+.env.*
+programming-keys.yaml
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# ── Common block of the house, completed 2026-09-15 ───────────────────────
+# Whatever a service here writes while it runs. Machine paths and, when
+# something fails, whole tracebacks: the record of a run, not of the program.
+# It goes in even where nothing writes a log yet, because the day something
+# starts to, nobody will remember to come back and add the rule.
+logs/
+
+# ── The plain output ──────────────────────────────────────────────────────
+# The published table travels gzipped: 80 MB plain against 5.5 MB compressed,
+# and GitHub warns above 50 MiB. This rule covers the plain file — what the
+# generator wrote until 2026-10-28 and what `gunzip -k` leaves behind. It is
+# the same bytes, so committing it would double the clone for nothing, and a
+# stale copy beside the .gz would diverge without anyone noticing.
+# ⚠️ The pattern matches the whole name, so `form-lemma-root-pos.tsv.gz` is
+# NOT caught by it. Checked with `git check-ignore -v` on both names.
+form-lemma-root-pos.tsv
